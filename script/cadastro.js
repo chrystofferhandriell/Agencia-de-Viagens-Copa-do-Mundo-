@@ -48,7 +48,7 @@ function handleRegister(e) {
 
   // 🔥 redireciona
   setTimeout(() => {
-    window.location.href = "login.html";
+    window.location.href = "/pages/log.html";
   }, 1500);
 }
 

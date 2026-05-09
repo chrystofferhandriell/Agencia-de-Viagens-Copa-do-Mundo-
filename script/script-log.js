@@ -43,7 +43,7 @@ function handleLogin(e) {
   showMessage("Login realizado com sucesso!", "success");
 
   setTimeout(() => {
-    window.location.href = "pricipal.html";
+    window.location.href = "/pages/index.html";
   }, 800);
 }
 

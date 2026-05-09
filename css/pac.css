@@ -1,0 +1,280 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+.header{
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 999;
+
+  padding: 22px 8%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(10,10,25,0.85);
+
+  backdrop-filter: blur(10px);
+}
+
+.logo{
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.logo span{
+  color: #ff3f92;
+}
+
+nav{
+  display: flex;
+  gap: 35px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+}
+
+nav a:hover{
+  color: #ff3f92;
+}
+
+/* HERO */
+
+.hero_pac{
+  width: 100%;
+  height: 70vh;
+
+  background:
+  url("/public/log.png");
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 8%;
+}
+
+.overlay{
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content{
+  position: relative;
+  z-index: 2;
+
+  max-width: 700px;
+}
+
+.hero-content p{
+  color: #ff79b7;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+
+.hero-content h1{
+  color: white;
+  font-size: 4.5rem;
+  line-height: 80px;
+  margin-bottom: 20px;
+}
+
+.hero-content span{
+  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
+  line-height: 35px;
+}
+
+/* FILTERS */
+
+.filters{
+  padding: 80px 8% 30px;
+}
+
+.filters h2{
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+}
+
+.filters-container{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filters-container input,
+.filters-container select{
+  padding: 16px 20px;
+
+  border-radius: 14px;
+  border: none;
+
+  background: white;
+
+  font-size: 1rem;
+
+  min-width: 220px;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.filters-container input:focus,
+.filters-container select:focus{
+  outline: 2px solid #ff3f92;
+}
+
+/* PACKAGES */
+
+.packages{
+  padding: 40px 8% 100px;
+}
+
+.cards-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 35px;
+}
+
+/* CARD */
+
+.card{
+  background: white;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+
+  transition: .4s;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+.card img{
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+}
+
+.card-content{
+  padding: 28px;
+}
+
+.card-content h3{
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.location{
+  color: #ff3f92;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.infos span{
+  color: #555;
+}
+
+.price{
+  font-size: 2rem;
+  font-weight: 800;
+
+  color: #111;
+
+  margin-bottom: 20px;
+}
+
+.card button{
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    45deg,
+    #ff3f92,
+    #ff6cb3
+  );
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .4s;
+}
+
+.card button:hover{
+  transform: translateY(-4px);
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 900px){
+
+  .hero-content h1{
+    font-size: 3rem;
+    line-height: 55px;
+  }
+
+  nav{
+    display: none;
+  }
+
+}
+
+@media(max-width: 600px){
+
+  .filters-container{
+    flex-direction: column;
+  }
+
+  .filters-container input,
+  .filters-container select{
+    width: 100%;
+  }
+
+}

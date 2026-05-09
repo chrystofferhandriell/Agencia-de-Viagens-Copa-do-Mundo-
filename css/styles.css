@@ -35,26 +35,32 @@ body{
 
 .navbar{
   width: 100%;
-  padding: 28px 8%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+  position: fixed;
+    top: 0;
+    left: 0;
+  z-index: 999;
 
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(8px);
 }
 
-.logo{
-  color: white;
-  font-size: 2rem;
-  font-weight: 800;
+.logo img{
+  width: 100px;
+  height: 100px;
+  padding: 0 0 0 20px;
 }
 
-.logo span{
-  color: #ff3f92;
+.logo-text{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 20px;
 }
+
 
 nav{
   display: flex;
@@ -95,6 +101,217 @@ nav a:hover{
   background: #ff3f92;
   color: white;
 }
+
+.header__nav{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+    margin: 0 0 0 50px;
+}
+
+/* MENU */
+
+.header__menu{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+  
+}
+
+/* LINKS */
+
+.header__menu-link{
+    position: relative;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+/* LINE EFFECT */
+
+.header__menu-link::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 2px;
+
+    background: #ff3f92;
+
+    transition: 0.4s;
+}
+
+.header__menu-link:hover{
+    color: #ff3f92;
+}
+
+.header__menu-link:hover::after{
+    width: 100%;
+}
+
+/* ACTIVE LINK */
+
+.header__menu-link.active{
+    color: #ff3f92;
+}
+
+.header__menu-link.active::after{
+    width: 100%;
+}
+
+/* ACTIONS */
+
+.header__actions{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+}
+
+.header__icon{
+  margin: 0 10px 0 50px;
+  width: 50px;
+    height: 50px;
+
+    border-radius: 120%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.35s;
+
+}
+
+/* ICON BUTTON */
+
+.header__icon-btn{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.35s;
+
+}
+
+/* HOVER */
+
+.header__icon-btn:hover{
+    background: linear-gradient(
+        45deg,
+        #ff3f92,
+        #ff6cb3
+    );
+
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(255,63,146,0.35);
+}
+
+/* SVG */
+
+.header__icon-btn svg{
+    width: 22px;
+    height: 22px;
+}
+
+/* CART BADGE */
+
+.header__cart-badge{
+    position: absolute;
+
+    top: -6px;
+    right: -4px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #ff3f92;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    border: 2px solid #111;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 768px){
+
+    .header__nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header__menu{
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .header__menu-link{
+        font-size: 0.95rem;
+    }
+
+    .header__actions{
+        gap: 14px;
+    }
+
+    .header__icon-btn{
+        width: 45px;
+        height: 45px;
+    }
+
+}
+
+
+
+
+
 
 /* HERO CONTENT */
 
