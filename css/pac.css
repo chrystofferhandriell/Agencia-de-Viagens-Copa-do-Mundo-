@@ -61,21 +61,18 @@ nav a:hover{
 /* HERO */
 
 .hero_pac{
-  width: 100%;
-  height: 70vh;
+   width: 100%;
+  min-height: 100vh;
 
   background:
+  
   url("/public/log.png");
 
-  background-size: cover;
+ background-size: cover;
   background-position: center;
 
   position: relative;
-
-  display: flex;
-  align-items: center;
-
-  padding: 0 8%;
+  padding-bottom: 140px;
 }
 
 .overlay{
