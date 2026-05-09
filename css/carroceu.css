@@ -1,0 +1,115 @@
+
+
+.destinations {
+  padding: 90px 5%;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.section-top span {
+  color: #38bdf8;
+  font-size: 14px;
+  letter-spacing: 2px;
+ 
+}
+
+.section-top h2 {
+  font-size: 40px;
+ margin-top: 10px;
+}
+
+.section-top button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #38bdf8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  min-width: 350px;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: #38bdf8;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media(max-width: 768px) {
+
+  .card {
+    min-width: 280px;
+  }
+
+  .section-top {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+}
