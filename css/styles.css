@@ -14,7 +14,7 @@ body{
 
 .hero{
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
 
   background:
   linear-gradient(
@@ -22,7 +22,7 @@ body{
     rgba(5, 5, 20, 0.65)
   ),
 
-  url(/public/tema.png);
+  url(/public/tema.png) no-repeat;
 
   background-size: cover;
   background-position: center;
@@ -309,17 +309,12 @@ nav a:hover{
 }
 
 
-
-
-
-
 /* HERO CONTENT */
-
-.hero-content{
+.hero-content {
   width: 100%;
   max-width: 700px;
 
-  padding-top: 130px;
+  padding-top: 138px;
   margin-left: 8%;
 }
 
@@ -372,33 +367,97 @@ nav a:hover{
 /* BUTTON */
 
 .hero-btn{
-  padding: 18px 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
-  border: none;
+  padding: 18px 42px;
 
-  border-radius: 60px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 70px;
 
-  background: linear-gradient(
-    45deg,
-    #ff3f92,
-    #ff6cb3
+  background:
+  linear-gradient(
+    135deg,
+    #ff2f86 0%,
+    #ff4fa0 35%,
+    #ff74bc 100%
   );
 
-  color: white;
+  color: #fff;
 
   font-size: 1rem;
-
   font-weight: 700;
+  letter-spacing: .5px;
 
   cursor: pointer;
 
-  transition: 0.4s;
+  text-decoration: none;
 
-  box-shadow: 0 10px 30px rgba(255, 63, 146, 0.35);
+  position: relative;
+  overflow: hidden;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+  transform .4s ease,
+  box-shadow .4s ease,
+  filter .4s ease;
+
+  box-shadow:
+  0 12px 35px rgba(255, 63, 146, 0.35),
+  inset 0 1px 1px rgba(255,255,255,0.25);
 }
 
+/* BRILHO CINEMATOGRÁFICO */
+.hero-btn::before{
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+
+  transition: .8s;
+}
+
+/* HOVER */
 .hero-btn:hover{
-  transform: translateY(-4px);
+  transform:
+  translateY(-5px)
+  scale(1.03);
+
+  filter: brightness(1.05);
+
+  box-shadow:
+  0 18px 45px rgba(255, 63, 146, 0.5),
+  0 0 25px rgba(255, 99, 180, 0.45);
+}
+
+/* ANIMAÇÃO DO BRILHO */
+.hero-btn:hover::before{
+  left: 120%;
+}
+
+/* CLIQUE */
+.hero-btn:active{
+  transform: scale(.97);
+}
+
+/* LINK DENTRO DO BOTÃO */
+.hero-btn a{
+  color: inherit;
+  text-decoration: none;
 }
 
 /* COUNTRIES BOX */
@@ -543,6 +602,23 @@ nav a:hover{
   color: #666;
 
   line-height: 28px;
+}
+
+.card-content-only { 
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+   font-size: 1.6rem;
+  margin:50% 0 10px 0;
+  color: #111;
+  
+}
+
+.card-content-only a{
+  text-decoration: none;
+  color: #ff3f92;
+  font-weight: 700;
+  transition: 0.3s;
 }
 
 /* CONTACT */

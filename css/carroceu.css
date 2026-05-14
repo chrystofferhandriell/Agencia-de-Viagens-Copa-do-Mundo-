@@ -23,7 +23,7 @@
  margin-top: 10px;
 }
 
-.section-top button {
+.section-top a {
   padding: 14px 24px;
   border: none;
   border-radius: 30px;
@@ -31,7 +31,14 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
+
+.section-top a:hover {
+background: #ff3f92;
+color: white;
+}
+
 
 .carousel-container {
   position: relative;
@@ -68,7 +75,7 @@
 }
 
 .card-content p {
-  color: #cbd5e1;
+  color: #111;
   line-height: 1.5;
 }
 
