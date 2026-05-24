@@ -1,120 +1,68 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body{
-  font-family: 'Poppins', sans-serif;
-  background: #f4f4f4;
-  overflow-x: hidden;
-}
-
-/* HEADER */
-
-.header{
-  width: 100%;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  z-index: 999;
-
-  padding: 22px 8%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: rgba(10,10,25,0.85);
-
-  backdrop-filter: blur(10px);
-}
-
-.logo{
-  color: white;
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.logo span{
-  color: #ff3f92;
-}
-
-nav{
-  display: flex;
-  gap: 35px;
-}
-
-nav a{
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: .3s;
-}
-
-nav a:hover{
-  color: #ff3f92;
-}
-
-/* HERO */
+/* =========================================
+   HERO
+========================================= */
 
 .hero_pac{
-   width: 100%;
+  width: 100%;
+
   height: 100vh;
 
   background:
-  
-  url("/public/log.png");
+    url("/public/log.png");
 
- background-size: cover;
+  background-size: cover;
+
   background-position: center;
 
   position: relative;
-  padding:130px 0 140px 0;
+
+  padding: 130px 0 140px 0;
 }
 
-.overlay{
-  position: absolute;
-  inset: 0;
-
-  background: rgba(0,0,0,0.55);
-}
+/* HERO CONTENT */
 
 .hero-content{
   position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 800px;
- 
-  padding:0 8%;
 
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 800px;
+
+  padding: 0 8%;
 }
 
 .hero-content p{
-  color: #ff79b7;
+  color: var(--primary-light);
+
   letter-spacing: 5px;
+
   margin-bottom: 30px;
- 
-  
 }
 
 .hero-content h1{
-  color: white;
+  color: var(--white);
+
   font-size: 3rem;
+
   line-height: 80px;
+
   margin-bottom: 20px;
 }
 
 .hero-content span{
-  color: rgba(255,255,255,0.8);
+  color: var(--text-light);
+
   font-size: 1.1rem;
+
   line-height: 35px;
 }
 
-
-/* FILTERS */
+/* =========================================
+   FILTERS
+========================================= */
 
 .filters{
   padding: 80px 8% 30px;
@@ -122,72 +70,101 @@ nav a:hover{
 
 .filters h2{
   font-size: 2.5rem;
+
   margin-bottom: 35px;
+
+  color: var(--text-light);
 }
+
+/* FILTER CONTAINER */
 
 .filters-container{
   display: flex;
+
   gap: 20px;
+
   flex-wrap: wrap;
 }
+
+/* INPUTS */
 
 .filters-container input,
 .filters-container select{
   padding: 16px 20px;
 
   border-radius: 14px;
+
   border: none;
 
-  background: white;
+  background: var(--text-light);
+
+  color: var(--text-dark);
 
   font-size: 1rem;
 
   min-width: 220px;
 
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
 }
 
 .filters-container input:focus,
 .filters-container select:focus{
-  outline: 2px solid #ff3f92;
+  outline: 2px solid var(--primary-color);
 }
 
-/* PACKAGES */
+/* =========================================
+   PACKAGES
+========================================= */
 
 .packages{
   padding: 40px 8% 100px;
 }
 
+/* GRID */
+
 .cards-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-  gap: 35px;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+  gap: var(--gap-grid);
 }
 
-/* CARD */
+/* =========================================
+   CARD
+========================================= */
 
 .card{
-  background: white;
+  background: var(--text-light);
 
-  border-radius: 25px;
+  border-radius: var(--card-radius);
 
   overflow: hidden;
 
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-card);
 
-  transition: .4s;
+  transition: var(--transition-medium);
+
+  position: relative;
 }
 
 .card:hover{
   transform: translateY(-10px);
 }
 
+/* IMAGE */
+
 .card img{
   width: 100%;
+
   height: 260px;
 
   object-fit: cover;
 }
+
+/* CONTENT */
 
 .card-content{
   padding: 28px;
@@ -195,35 +172,51 @@ nav a:hover{
 
 .card-content h3{
   font-size: 1.8rem;
+
   margin-bottom: 10px;
+
+  color: var(--text-dark);
 }
 
+/* LOCATION */
+
 .location{
-  color: #ff3f92;
+  color: var(--primary-color);
+
   font-weight: 600;
+
   margin-bottom: 20px;
 }
 
+/* INFOS */
+
 .infos{
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
 
   margin-bottom: 25px;
 }
 
 .infos span{
-  color: #555;
+  color: var(--text-medium);
 }
+
+/* PRICE */
 
 .price{
   font-size: 2rem;
+
   font-weight: 800;
 
-  color: #111;
+  color: var(--text-dark);
 
   margin-bottom: 20px;
 }
+
+/* BUTTON */
 
 .card button{
   width: 100%;
@@ -234,32 +227,32 @@ nav a:hover{
 
   border-radius: 50px;
 
-  background: linear-gradient(
-    45deg,
-    #ff3f92,
-    #ff6cb3
-  );
+  background: var(--gradient-primary);
 
-  color: white;
+  color: var(--white);
 
   font-size: 1rem;
+
   font-weight: 700;
 
   cursor: pointer;
 
-  transition: .4s;
+  transition: var(--transition-medium);
 }
 
 .card button:hover{
   transform: translateY(-4px);
 }
 
-/* RESPONSIVO */
+/* =========================================
+   RESPONSIVO
+========================================= */
 
 @media(max-width: 900px){
 
   .hero-content h1{
     font-size: 3rem;
+
     line-height: 55px;
   }
 
