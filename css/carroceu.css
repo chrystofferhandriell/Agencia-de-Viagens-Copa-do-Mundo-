@@ -21,6 +21,7 @@
 .section-top h2 {
   font-size: 40px;
  margin-top: 10px;
+ color: var(--text-dark)
 }
 
 .section-top a {
@@ -65,17 +66,18 @@ color: white;
   object-fit: cover;
 }
 
-.card-content {
+.card-conteu {
   padding: 20px;
 }
 
-.card-content h3 {
+.card-conteu h3 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: var( --text-dark);
 }
 
-.card-content p {
-  color: #111;
+.card-conteu p {
+  color: var( --text-dark);
   line-height: 1.5;
 }
 

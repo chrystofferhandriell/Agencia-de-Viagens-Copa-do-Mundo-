@@ -19,6 +19,20 @@
     #ff74bc
   );
 
+  --gradient-dark: linear-gradient(
+    180deg,
+    #0f172a,
+    #111827,
+    #0b1120
+  );
+
+  --gradient-light: linear-gradient(
+  180deg,
+  #ffffff 0%,
+  #f5f7fb 45%,
+  #edf2f7 100%
+);
+
   /* =========================================
      ⚫ CORES ESCURAS
   ========================================= */
@@ -28,14 +42,16 @@
   --dark-secondary: #1a1a1a;
   --dark-card: #202020;
 
+
+  /*footer*/
+  --footer-bg: #070b16;
   /* =========================================
      📝 TEXTOS
   ========================================= */
-  
-  --text-medium: rgba(0,0,0,.7);
+  --text-dark: rgb(0, 0, 0);
   --text-light: rgb(255, 255, 255);
-  --text-muted: rgba(0,0,0,.5);
-
+   --text-medium: rgba(0, 0, 0, 0.6);
+   --text-muted: rgba(150, 150, 150, 0.63);
   /* =========================================
      🌫 OVERLAY / TRANSPARÊNCIA
   ========================================= */

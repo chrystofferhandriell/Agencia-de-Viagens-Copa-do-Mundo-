@@ -138,6 +138,8 @@
 
 .card{
   background: var(--text-light);
+   
+  border: 1px solid var(--text-medium);
 
   border-radius: var(--card-radius);
 
