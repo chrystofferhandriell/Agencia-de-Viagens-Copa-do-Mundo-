@@ -108,3 +108,67 @@
   --transition-slow: .6s ease;
 
 }
+
+/* =========================================
+   🌙 DARK MODE (PADRÃO)
+========================================= */
+
+:root{
+
+  /* BACKGROUNDS */
+  --bg-main: var(--gradient-dark);
+  --bg-secondary: var(--dark-secondary);
+  --bg-card: rgba(255,255,255,.05);
+  --bg-navbar: rgba(0,0,0,.35);
+  --bg-footer: var(--footer-bg);
+  --bg-input: #111827;
+
+  /* TEXTOS */
+  --text-primary: var(--text-light);
+  --text-secondary: #e2e8f0;
+  --text-muted-color: #94a3b8;
+
+  /* BORDAS */
+  --border-color: rgba(255,255,255,.08);
+
+  /* OVERLAY */
+  --overlay-theme: var(--overlay);
+
+  /* CARDS */
+  --card-background: rgba(255,255,255,.05);
+
+}
+
+/* =========================================
+   ☀ LIGHT MODE
+========================================= */
+
+[data-theme="light"]{
+
+  /* BACKGROUNDS */
+  --bg-main: var(--gradient-light);
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255,255,255,.9);
+  --bg-navbar: rgba(255,255,255,.75);
+  --bg-footer: #ffffff;
+  --bg-input: #f1f5f9;
+
+  /* TEXTOS */
+  --text-primary: var(--text-dark);
+  --text-secondary: rgba(0,0,0,.75);
+  --text-muted-color: var(--text-medium);
+
+  /* BORDAS */
+  --border-color: rgba(0,0,0,.08);
+
+  /* OVERLAY */
+  --overlay-theme:
+    linear-gradient(
+      rgba(255,255,255,.35),
+      rgba(255,255,255,.45)
+    );
+
+  /* CARDS */
+  --card-background: rgba(255,255,255,.95);
+
+}

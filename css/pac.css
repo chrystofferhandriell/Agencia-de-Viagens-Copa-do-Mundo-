@@ -152,10 +152,6 @@
   position: relative;
 }
 
-.card:hover{
-  transform: translateY(-10px);
-}
-
 /* IMAGE */
 
 .card img{

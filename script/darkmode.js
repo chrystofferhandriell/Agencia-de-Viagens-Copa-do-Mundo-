@@ -1,34 +1,109 @@
-// ===============================
-// DARK MODE
-// ===============================
+// =========================================
+// 🌙 DARK MODE / ☀ LIGHT MODE
+// WORLD TRAVEL 2026
+// =========================================
 
+// botão
 const themeToggle = document.getElementById("themeToggle");
 
-// pegar tema salvo
+// html
+const rootElement = document.documentElement;
+
+// =========================================
+// DEFINIR TEMA INICIAL
+// =========================================
+
+// pega tema salvo
 const savedTheme = localStorage.getItem("theme");
 
-// aplicar tema salvo ao carregar
-if (savedTheme) {
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  updateIcon(savedTheme);
-}
+// verifica preferência do sistema
+const prefersDark = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
 
-// alternar tema
+// tema inicial
+const initialTheme =
+  savedTheme || (prefersDark ? "dark" : "light");
+
+// aplica tema
+setTheme(initialTheme);
+
+// =========================================
+// EVENTO DO BOTÃO
+// =========================================
+
 themeToggle?.addEventListener("click", () => {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
 
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  const currentTheme =
+    rootElement.getAttribute("data-theme");
 
-  document.documentElement.setAttribute("data-theme", newTheme);
+  const newTheme =
+    currentTheme === "dark"
+      ? "light"
+      : "dark";
 
-  localStorage.setItem("theme", newTheme);
+  setTheme(newTheme);
 
-  updateIcon(newTheme);
 });
 
-// atualizar ícone
-function updateIcon(theme) {
-  if (!themeToggle) return;
+// =========================================
+// FUNÇÃO PRINCIPAL
+// =========================================
 
-  themeToggle.textContent = theme === "dark" ? "☀️" : "🌙";
+function setTheme(theme){
+
+  // aplica atributo
+  rootElement.setAttribute(
+    "data-theme",
+    theme
+  );
+
+  // salva tema
+  localStorage.setItem(
+    "theme",
+    theme
+  );
+
+  // atualiza ícone
+  updateThemeIcon(theme);
+
 }
+
+// =========================================
+// ALTERAR ÍCONE
+// =========================================
+
+function updateThemeIcon(theme){
+
+  if(!themeToggle) return;
+
+  themeToggle.innerHTML =
+    theme === "dark"
+      ? "☀️"
+      : "🌙";
+
+}
+
+// =========================================
+// ALTERAÇÃO AUTOMÁTICA DO SISTEMA
+// =========================================
+
+window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).addEventListener("change", (event) => {
+
+  // só altera automático
+  // se usuário não escolheu manualmente
+
+  if(!localStorage.getItem("theme")){
+
+    const newTheme =
+      event.matches
+        ? "dark"
+        : "light";
+
+    setTheme(newTheme);
+
+  }
+
+});
