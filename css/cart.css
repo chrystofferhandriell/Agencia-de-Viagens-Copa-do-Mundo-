@@ -1,18 +1,4 @@
-/* =========================
-   RESET
-========================= */
 
-body{
-  font-family: var(--font-main);
-
-  background:
-  linear-gradient(var(--gradient-dark));
-   
-
-  color: var(--text-light);
-
-  overflow-x: hidden;
-}
 
 /* =========================
    CONTAINER

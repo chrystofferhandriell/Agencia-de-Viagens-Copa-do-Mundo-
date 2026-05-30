@@ -20,6 +20,15 @@
   padding: 130px 0 140px 0;
 }
 
+.overlayt{
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: var(--overlay);
+}
+
 /* HERO CONTENT */
 
 .hero-content{
@@ -73,7 +82,7 @@
 
   margin-bottom: 35px;
 
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 /* FILTER CONTAINER */

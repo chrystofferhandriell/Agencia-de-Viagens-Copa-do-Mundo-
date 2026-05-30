@@ -14,7 +14,7 @@ const rootElement = document.documentElement;
 // =========================================
 
 // pega tema salvo
-const savedTheme = localStorage.getItem("theme");
+const savedTheme = localStorage.getItem("data-theme");
 
 // verifica preferência do sistema
 const prefersDark = window.matchMedia(
@@ -60,7 +60,7 @@ function setTheme(theme){
 
   // salva tema
   localStorage.setItem(
-    "theme",
+    "data-theme",
     theme
   );
 

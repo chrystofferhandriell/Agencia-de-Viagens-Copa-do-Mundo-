@@ -29,13 +29,13 @@
   position: absolute;
   inset: 0;
 
-  background: var(--overlay-dark);
+ 
 }
 
 .hero-conteudo{
   position: relative;
 
-  z-index: 2;
+  
 
   max-width: 850px;
 

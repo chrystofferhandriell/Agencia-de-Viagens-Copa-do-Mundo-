@@ -1,9 +1,4 @@
-.overlay{
-  position: absolute;
-  inset: 0;
 
-  background: var(--overlay-dark);
-}
 
 /* HERO CONTENT */
 .hero-conte{
