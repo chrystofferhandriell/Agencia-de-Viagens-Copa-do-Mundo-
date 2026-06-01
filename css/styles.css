@@ -2,12 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.light-theme{
   font-family: var(--font-main);
-
-  background:var(--gradient-dark);
    
+}
+body{
 
   color: var(--text-light);
 
@@ -545,91 +543,6 @@ nav a:hover{
   color: var(--text-light);
 }
 
-/* =========================================
-   DESTINATIONS
-========================================= */
-
-.destinations{
-  padding: 140px 8% 80px;
-}
-
-/* TOP */
-
-.section-top{
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 50px;
-}
-
-.section-top span{
-  color: var(--primary-color);
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-.section-top h2{
-  font-size: 3rem;
- 
-  margin-top: 10px;
-}
-
-/* BUTTON */
-
-.section-top button{
-  padding: 16px 30px;
-
-  border-radius: 40px;
-
-  border: 2px solid var(--primary-color);
-
-  background: transparent;
-
-  color: var(--primary-color);
-
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition: var(--transition-fast);
-}
-
-.section-top button:hover{
-  background: var(--primary-color);
-
-  color: var(--white);
-}
-
-/* ONLY */
-
-.card-content-only{
-  display: flex;
-
-  text-align: center;
-
-  flex-direction: column;
-
-  font-size: 1.6rem;
-
-  margin: 50% 0 10px 0;
-
-  color: var(--text-dark);
-}
-
-.card-content-only a{
-  text-decoration: none;
-
-  color: var(--primary-color);
-
-  font-weight: 700;
-
-  transition: var(--transition-fast);
-}
-
 
 /* =========================================
    ABOUT
@@ -640,7 +553,7 @@ nav a:hover{
 
   padding: 50px;
 
-  background: var( --gradient-light);
+ 
 }
 
 .about-container{

@@ -1,109 +1,34 @@
-// =========================================
-// 🌙 DARK MODE / ☀ LIGHT MODE
-// WORLD TRAVEL 2026
-// =========================================
+// ===============================
+// DARK MODE
+// ===============================
 
-// botão
 const themeToggle = document.getElementById("themeToggle");
 
-// html
-const rootElement = document.documentElement;
+// pegar tema salvo
+const savedTheme = localStorage.getItem("theme");
 
-// =========================================
-// DEFINIR TEMA INICIAL
-// =========================================
+// aplicar tema salvo ao carregar
+if (savedTheme) {
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  updateIcon(savedTheme);
+}
 
-// pega tema salvo
-const savedTheme = localStorage.getItem("data-theme");
-
-// verifica preferência do sistema
-const prefersDark = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-).matches;
-
-// tema inicial
-const initialTheme =
-  savedTheme || (prefersDark ? "dark" : "light");
-
-// aplica tema
-setTheme(initialTheme);
-
-// =========================================
-// EVENTO DO BOTÃO
-// =========================================
-
+// alternar tema
 themeToggle?.addEventListener("click", () => {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
 
-  const currentTheme =
-    rootElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-  const newTheme =
-    currentTheme === "dark"
-      ? "light"
-      : "dark";
+  document.documentElement.setAttribute("data-theme", newTheme);
 
-  setTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
 
+  updateIcon(newTheme);
 });
 
-// =========================================
-// FUNÇÃO PRINCIPAL
-// =========================================
+// atualizar ícone
+function updateIcon(theme) {
+  if (!themeToggle) return;
 
-function setTheme(theme){
-
-  // aplica atributo
-  rootElement.setAttribute(
-    "data-theme",
-    theme
-  );
-
-  // salva tema
-  localStorage.setItem(
-    "data-theme",
-    theme
-  );
-
-  // atualiza ícone
-  updateThemeIcon(theme);
-
+  themeToggle.textContent = theme === "dark" ? "☀️" : "🌙";
 }
-
-// =========================================
-// ALTERAR ÍCONE
-// =========================================
-
-function updateThemeIcon(theme){
-
-  if(!themeToggle) return;
-
-  themeToggle.innerHTML =
-    theme === "dark"
-      ? "☀️"
-      : "🌙";
-
-}
-
-// =========================================
-// ALTERAÇÃO AUTOMÁTICA DO SISTEMA
-// =========================================
-
-window.matchMedia(
-  "(prefers-color-scheme: dark)"
-).addEventListener("change", (event) => {
-
-  // só altera automático
-  // se usuário não escolheu manualmente
-
-  if(!localStorage.getItem("theme")){
-
-    const newTheme =
-      event.matches
-        ? "dark"
-        : "light";
-
-    setTheme(newTheme);
-
-  }
-
-});

@@ -1,80 +1,78 @@
+/* =========================================
+   🌙 DARK MODE (PADRÃO)
+========================================= */
 
-    :root{
+[data-theme="dark"]{
 
   /* =========================================
      🎨 CORES PRINCIPAIS
   ========================================= */
-  
-  --primary-color: #ff2f86;
-  --primary-light: #ff74bc;
-  --primary-dark: #e61f73;
+
+  --primary-color: #ff4f9f;
+  --primary-light: #ff85c7;
+  --primary-dark: #d91b68;
 
   /* =========================================
      🌈 GRADIENTES
   ========================================= */
 
-  --gradient-primary: linear-gradient(
-    135deg,
-    #ff2f86,
-    #ff74bc
-  );
-
   --gradient-dark: linear-gradient(
     180deg,
-    #0f172a,
-    #111827,
-    #0b1120
+    #020617 0%,
+    #0f172a 50%,
+    #111827 100%
   );
 
-  --gradient-light: linear-gradient(
-  180deg,
-  #ffffff 0%,
-  #f5f7fb 45%,
-  #edf2f7 100%
-);
+  /* =========================================
+     ⚫ CORES BASE
+  ========================================= */
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --dark-bg: #0b1120;
+  --dark-secondary: #111827;
+  --dark-card: #1e293b;
 
   /* =========================================
-     ⚫ CORES ESCURAS
+     🦶 FOOTER
   ========================================= */
-   --white: #ffffff;
-  --black: #000000;
-  --dark-bg: #111111;
-  --dark-secondary: #1a1a1a;
-  --dark-card: #202020;
 
+  --footer-bg: #020617;
 
-  /*footer*/
-  --footer-bg: #070b16;
   /* =========================================
      📝 TEXTOS
   ========================================= */
-  --text-dark: rgb(0, 0, 0);
+
+  --text-dark: rgb(255, 255, 255);
   --text-light: rgb(255, 255, 255);
-   --text-medium: rgba(0, 0, 0, 0.6);
-   --text-muted: rgba(150, 150, 150, 0.63);
+
+  --text-medium: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.55);
+
   /* =========================================
      🌫 OVERLAY / TRANSPARÊNCIA
   ========================================= */
 
-  
-  --overlay:linear-gradient(
-      rgba(5,5,20,.55),
-      rgba(5,5,20,.65)
-    );
-    --overlayt:linear-gradient(
-      rgba(5,5,20,.55),
-      rgba(5,5,20,.65)
-    );
+  --overlay: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.85)
+  );
+
+  --overlayt: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.60)
+  );
 
   /* =========================================
      ✨ SOMBRAS
   ========================================= */
 
   --shadow-primary:
-    0 10px 30px rgba(255,63,146,.35);
+    0 10px 30px rgba(255, 79, 159, .25);
 
   --shadow-card:
-    0 10px 30px rgba(0,0,0,.08);
+    0 10px 30px rgba(0, 0, 0, .45);
 
   /* =========================================
      🔘 BOTÕES
@@ -110,5 +108,4 @@
   --transition-fast: .3s ease;
   --transition-medium: .4s ease;
   --transition-slow: .6s ease;
-
 }
